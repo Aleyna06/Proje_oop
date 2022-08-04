@@ -9,7 +9,7 @@ using Proje_oop.ProjeContext;
 namespace Proje_oop.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20220706211414_mig1")]
+    [Migration("20220803120659_mig1")]
     partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -60,8 +60,8 @@ namespace Proje_oop.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Name")
-                        .HasColumnType("int");
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
