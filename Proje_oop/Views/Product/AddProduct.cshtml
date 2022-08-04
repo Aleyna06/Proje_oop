@@ -5,18 +5,16 @@
 }
 
 <h1>Ürün Ekleme Sayfası </h1>
-<form method="post"> 
-    
-    @Html.Label("Ürün adı")
-    @Html.TextBoxFor(X=>X.Name)
+<form method="post">
+
+    @Html.Label("Ürün Adı")
+    @Html.TextBoxFor(X => X.Name, new { @class = "form-control" })
     </br>
-    @Html.Label("fiyat")
-    @Html.TextBoxFor(x=>x.Price)
+    @Html.Label("Fiyat")
+    @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
     </br>
-    @Html.Label("stok bilgisi")
-    @Html.TextBoxFor(x => x.Stock)
+    @Html.Label("Stok Bilgisi")
+    @Html.TextBoxFor(x => x.Stock, new { @class = "form-control" })
     </br>
-    @Html.Label("ürün ıd")
-    @Html.TextBoxFor(x => x.Id)
-    <button class="btn btn-info"></button>
+    <button class="btn btn-info">Ürünü kaydet</button>
 </form>
